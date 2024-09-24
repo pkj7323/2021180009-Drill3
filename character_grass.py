@@ -41,6 +41,7 @@ def run_top(x,y):
         x = i
     return x,y
 def run_right(x,y):
+    x=get_canvas_width()
     for i in range(get_canvas_height(),90,-2):
         render(x,y)
         y = i
@@ -64,11 +65,34 @@ def run_circle(x,y):
     r = 300
     for d in range(360):
         render(x,y)
-        x = cx + r * math.cos(math.radians(d))
-        y = cy + r * math.sin(math.radians(d))
+        x = x + r * math.cos(math.radians(d))
+        y = y + r * math.sin(math.radians(d))
     x=0
     y=90
     return x,y
+
+def run_rightTop(x, y):
+    for i in range(90,get_canvas_height(),1):
+        render(x,y)
+        y = i
+        x += 1.5
+def run_leftBottom(x, y):
+    for i in range(y, 90, -1):
+        render(x, y)
+        y = i + 0.5
+        x += 1
+
+
+
+
+
+def run_triangle(x,y):
+    run_bottom(x,y)
+    run_rightTop(x,y)
+    run_right(x,y)
+    return x,y
+
+
 
 x=0
 y=90
@@ -76,6 +100,7 @@ while True:
 
     x,y = run_rectangle(x,y)
     x,y = run_circle(x,y)
+    x,y = run_triangle(x,y)
 
 
 close_canvas()
