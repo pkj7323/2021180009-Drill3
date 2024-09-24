@@ -9,6 +9,7 @@ grass = load_image('grass.png')
 #git에 커밋을 한다 git은 개발 일지이다.
 #코딩을 할때 조그맣게 시작 조각을 만들어서 붙이고붙이면서 굴리면서 코딩한다.
 # 먼저 이미지를 띄운다
+# circle함수를 만들어본다.
 
 
 x=400
@@ -47,11 +48,15 @@ def run_rectangle():
 def run_circle():
     global x
     global y
-    r=3
+    cx = get_canvas_width()//2
+    cy = get_canvas_height()//2
+    r = 300
     for d in range(360):
         render()
-        x =x + r * math.cos(math.radians(d))
-        y =y + r * math.sin(math.radians(d))
+        x = cx + r * math.cos(math.radians(d))
+        y = cy + r * math.sin(math.radians(d))
+    x=cx
+    y=90
     pass
 
 
