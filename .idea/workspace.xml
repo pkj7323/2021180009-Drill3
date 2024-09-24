@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="894e52e4-b26d-4952-af45-24ce45e32004" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/character.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/character_grass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grass.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="894e52e4-b26d-4952-af45-24ce45e32004" name="변경" comment="뼈대 전체적인 구조완성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character_grass.py" beforeDir="false" afterPath="$PROJECT_DIR$/character_grass.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +38,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.character_grass.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/MSI/source/repos/2DGP-Drill3",
@@ -76,11 +72,27 @@
       <option name="presentableId" value="Default" />
       <updated>1727137992839</updated>
       <workItem from="1727137994224" duration="63000" />
-      <workItem from="1727138237409" duration="513000" />
+      <workItem from="1727138237409" duration="1181000" />
     </task>
+    <task id="LOCAL-00001" summary="뼈대 전체적인 구조완성">
+      <option name="closed" value="true" />
+      <created>1727138955235</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727138955235</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="뼈대 전체적인 구조완성" />
+    <option name="LAST_COMMIT_MESSAGE" value="뼈대 전체적인 구조완성" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/2DGP_Drill3$character_grass.coverage" NAME="character_grass 커버리지 결과" MODIFIED="1727139427872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
