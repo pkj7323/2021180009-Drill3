@@ -10,11 +10,11 @@ grass = load_image('grass.png')
 #코딩을 할때 조그맣게 시작 조각을 만들어서 붙이고붙이면서 굴리면서 코딩한다.
 # 먼저 이미지를 띄운다
 # circle함수를 만들어본다.
-
+# 컴파일하고 오류가 나지않으면 커밋을 한다.
 
 x=400
 y=90
-degree = 0
+
 
 def render():
     clear_canvas()
@@ -22,28 +22,25 @@ def render():
     grass.draw(400, 30)
     update_canvas()
     delay(0.01)
-
+def run_bottom():
+    pass
+def run_top():
+    pass
+def run_right():
+    pass
+def run_left():
+    pass
 
 def run_rectangle():
     global x
     global y
-    while True:
-        while x < 800:
-            render()
-            x += 2
-        while y < 600:
-            render()
-            y += 2
-        while x > 0:
-            render()
-            x -= 2
-        while y > 90:
-            render()
-            y -= 2
-        while x < 400:
-            render()
-            x += 2
-        break
+    run_bottom()
+    run_right()
+    run_top()
+    run_left()
+
+
+
     pass
 def run_circle():
     global x
