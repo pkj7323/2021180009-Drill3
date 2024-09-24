@@ -65,8 +65,8 @@ def run_circle(x,y):
     r = 300
     for d in range(360):
         render(x,y)
-        x = x + r * math.cos(math.radians(d))
-        y = y + r * math.sin(math.radians(d))
+        x = cx + r * math.cos(math.radians(d))
+        y = cy + r * math.sin(math.radians(d))
     x=0
     y=90
     return x,y
