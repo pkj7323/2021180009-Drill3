@@ -16,74 +16,66 @@ grass = load_image('grass.png')
 # 컴파일 시간도 테스트 리드 타임으로 들어감
 # 즉 여기서는 원을 그리는 것을 확인했는데 원그리는 것을 안보면 된다.
 # circle함수를 주석 처리하자
-x = 0
-y = 90
 
 
-def render():
+# 첫줄 시작을 잘해야 한다.
+# 뼈대를 잘 만들어야한다.
+# 함수를 이용한다.
+# 테스트 리드 타임을 줄여야한다.
+#
+def render(x,y):
     clear_canvas()
     character.draw(x, y)
     grass.draw(400, 30)
     update_canvas()
     delay(0.01)
-def run_bottom():
-    global x
-    global y
-    while x < get_canvas_width():
-        render()
-        x+=2
+def run_bottom(x,y):
+    for i in range(get_canvas_width(),0,-2):
+        render(x,y)
+        x = i
+    return x,y
+def run_top(x,y):
+    y=get_canvas_height()
+    for i in range(0,get_canvas_width(),2):
+        render(x,y)
+        x = i
+    return x,y
+def run_right(x,y):
+    for i in range(get_canvas_height(),90,-2):
+        render(x,y)
+        y = i
+    return x,y
+def run_left(x,y):
+    for i in range(0,get_canvas_height(),2):
+        render(x,y)
+        y=i
+    return x,y
 
-def run_top():
-    global x
-    global y
-    while x > 0:
-        render()
-        x -= 2
-def run_right():
-    global x
-    global y
-    while y < get_canvas_height():
-        render()
-        y+=2
+def run_rectangle(x,y):
+    x, y = run_top(x, y)
+    x, y = run_right(x, y)
+    x, y = run_bottom(x, y)
+    x, y = run_left(x, y)
+    return x,y
 
-def run_left():
-    global x
-    global y
-    while y > 90:
-        render()
-        y-=2
-    pass
-
-def run_rectangle():
-    global x
-    global y
-    run_bottom()
-    run_right()
-    run_top()
-    run_left()
-
-
-
-    pass
-def run_circle():
-    global x
-    global y
+def run_circle(x,y):
     cx = get_canvas_width()//2
     cy = get_canvas_height()//2
     r = 300
     for d in range(360):
-        render()
+        render(x,y)
         x = cx + r * math.cos(math.radians(d))
         y = cy + r * math.sin(math.radians(d))
     x=0
     y=90
-    pass
+    return x,y
 
-
+x=0
+y=90
 while True:
 
-    run_rectangle()
-    #run_circle()
+    x,y = run_rectangle(x,y)
+    x,y = run_circle(x,y)
 
 
 close_canvas()
