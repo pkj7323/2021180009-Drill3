@@ -10,10 +10,14 @@ grass = load_image('grass.png')
 #코딩을 할때 조그맣게 시작 조각을 만들어서 붙이고붙이면서 굴리면서 코딩한다.
 # 먼저 이미지를 띄운다
 # circle함수를 만들어본다.
-# 컴파일하고 오류가 나지않으면 커밋을 한다.
-
-x=400
-y=90
+# 컴파일하고 syntx오류가 나지않으면 커밋을 한다.
+# 테스트 리드 타임 = 내가 어떤 버그나 테스트를 하기위해서 걸리는 사간
+# 최대한 테스트 리드 타임을 줄여야한다.
+# 컴파일 시간도 테스트 리드 타임으로 들어감
+# 즉 여기서는 원을 그리는 것을 확인했는데 원그리는 것을 안보면 된다.
+# circle함수를 주석 처리하자
+x = 0
+y = 90
 
 
 def render():
@@ -23,12 +27,31 @@ def render():
     update_canvas()
     delay(0.01)
 def run_bottom():
-    pass
+    global x
+    global y
+    while x < get_canvas_width():
+        render()
+        x+=2
+
 def run_top():
-    pass
+    global x
+    global y
+    while x > 0:
+        render()
+        x -= 2
 def run_right():
-    pass
+    global x
+    global y
+    while y < get_canvas_height():
+        render()
+        y+=2
+
 def run_left():
+    global x
+    global y
+    while y > 90:
+        render()
+        y-=2
     pass
 
 def run_rectangle():
@@ -52,7 +75,7 @@ def run_circle():
         render()
         x = cx + r * math.cos(math.radians(d))
         y = cy + r * math.sin(math.radians(d))
-    x=cx
+    x=0
     y=90
     pass
 
@@ -60,7 +83,7 @@ def run_circle():
 while True:
 
     run_rectangle()
-    run_circle()
+    #run_circle()
 
 
 close_canvas()
