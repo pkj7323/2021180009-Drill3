@@ -41,21 +41,17 @@ def run_rectangle():
             y -= 2
         while x < 400:
             render()
-            x += 1
+            x += 2
         break
     pass
 def run_circle():
     global x
     global y
-    global degree
-    while True:
+    r=3
+    for d in range(360):
         render()
-        x = x + math.cos(degree / 360 * 2 * math.pi)
-        y = y + math.sin(degree / 360 * 2 * math.pi)
-        degree = degree + 1
-        if degree == 360:
-            degree = 0
-            break
+        x =x + r * math.cos(math.radians(d))
+        y =y + r * math.sin(math.radians(d))
     pass
 
 
