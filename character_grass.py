@@ -24,6 +24,25 @@ def render():
 
 
 def run_rectangle():
+    global x
+    global y
+    while True:
+        while x < 800:
+            render()
+            x += 2
+        while y < 600:
+            render()
+            y += 2
+        while x > 0:
+            render()
+            x -= 2
+        while y > 90:
+            render()
+            y -= 2
+        while x < 400:
+            render()
+            x += 1
+        break
     pass
 def run_circle():
     global x
